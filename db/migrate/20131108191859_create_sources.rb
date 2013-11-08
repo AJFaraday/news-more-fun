@@ -3,7 +3,8 @@ class CreateSources < ActiveRecord::Migration
     create_table :sources do |t|
       t.string :name
       t.string :url
-
+      t.string :body_xpath
+  
       t.timestamps
     end
   end

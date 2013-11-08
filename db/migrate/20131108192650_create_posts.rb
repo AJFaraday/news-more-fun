@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :headline
       t.text :body
       t.integer :source_id
-      t.string :hash
+      t.string :rss_link
 
       t.timestamps
     end

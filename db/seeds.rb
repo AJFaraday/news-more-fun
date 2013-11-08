@@ -5,10 +5,10 @@
 # 
 # RSS sources
 #
-Source.create(:name => "BBC News", :url => "http://feeds.bbci.co.uk/news/rss.xml")
-Source.create(:name => 'Daily Mail', :url => "http://www.dailymail.co.uk/home/index.rss")
-Source.create(:name => "CNN", :url => "http://rss.cnn.com/rss/edition.rss")
-Source.create(:name => 'FOX News', :url => "http://feeds.foxnews.com/foxnews/latest")
+Source.create(:name => "BBC News", :url => "http://feeds.bbci.co.uk/news/rss.xml", :body_xpath => '//*[@id="main-content"]/div/div/p')
+Source.create(:name => 'Daily Mail', :url => "http://www.dailymail.co.uk/home/index.rss", :body_xpath => '//*[@id="js-article-text"]/p')
+Source.create(:name => "CNN", :url => "http://rss.cnn.com/rss/edition.rss", :body_xpath => '//*[@id="cnnContentContainer"]/div/p')
+Source.create(:name => 'FOX News', :url => "http://feeds.foxnews.com/foxnews/latest", :body_xpath => '//*[@id="content"]/div/div/div/div/div/article/div/div/p')
 
 #
 # substitutions (from http://xkcd.com/1288/)
