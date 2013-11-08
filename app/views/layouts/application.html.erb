@@ -8,7 +8,22 @@
 </head>
 <body>
 
+<div style='width:100%;'>
+  <h1>News More Fun</h1>
+  <p>An attempt to enact an <a href='http://www.xkcd.com/1288'>XKCD strip</a> in Ruby on Rails.</p>
+  <p>By <a href='http://www.andrewfaraday.com'>Andrew Faraday</a></p>
+</div>
+
+<div stlye='float:left; width:75%;'>
 <%= yield %>
+</div>
+<div stlye='float:left; width:20%;'>
+  <ul>
+    <% Source.all.each do |source| %>
+      <li><%= link_to source.name, source_path(source) %></li>
+    <% end %>
+  </ul>
+</div>
 
 </body>
 </html>
