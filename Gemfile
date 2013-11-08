@@ -7,6 +7,8 @@ gem 'rails', '3.2.14'
 
 gem 'sqlite3'
 
+gem 'nokogiri', '1.5.1'
+
 gem 'json'
 
 # Gems used only for assets and not required
