@@ -2,6 +2,6 @@
 
 <ul>
   <% @source.posts.reverse.each do |post| %>
-    <li><%= post.headline %> (<%= post.sub_count%> substitutions)</li>
+    <li><%= link_to post.headline, source_post_path(@source,post) %> (<%= post.sub_count%> substitutions)</li>
   <% end %>  
 </ul>
