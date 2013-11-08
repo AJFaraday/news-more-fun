@@ -1,0 +1,7 @@
+<h1>Posts from <%= @source.name %></h1>
+
+<ul>
+  <% @source.posts.reverse.each do |post| %>
+    <li><%= post.headline %> (<%= post.sub_count%> substitutions)</li>
+  <% end %>  
+</ul>

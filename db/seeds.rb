@@ -6,7 +6,7 @@
 # RSS sources
 #
 Source.create(:name => "BBC News", :url => "http://feeds.bbci.co.uk/news/rss.xml", :body_xpath => '//*[@id="main-content"]/div/div/p')
-Source.create(:name => 'Daily Mail', :url => "http://www.dailymail.co.uk/home/index.rss", :body_xpath => '//*[@id="js-article-text"]/p')
+Source.create(:name => 'The Daily Mail', :url => "http://www.dailymail.co.uk/home/index.rss", :body_xpath => '//*[@id="js-article-text"]/p')
 Source.create(:name => "CNN", :url => "http://rss.cnn.com/rss/edition.rss", :body_xpath => '//*[@id="cnnContentContainer"]/div/p')
 Source.create(:name => 'FOX News', :url => "http://feeds.foxnews.com/foxnews/latest", :body_xpath => '//*[@id="content"]/div/div/div/div/div/article/div/div/p')
 

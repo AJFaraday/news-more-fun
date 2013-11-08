@@ -19,7 +19,7 @@
   <div style="position:relative; float:left; width:150px;">
     <ul>
       <% Source.all.each do |source| %>
-        <li><%= source.name %></li>
+        <li><%= link_to source.name, source_path(source) %></li>
       <% end %>
     </ul>
   </div>
