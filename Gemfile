@@ -6,9 +6,7 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
-gem 'nokogiri', '1.5.1'
-
+gem 'nokogiri'
 gem 'json'
 
 # Gems used only for assets and not required
