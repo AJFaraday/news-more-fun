@@ -7,23 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div style='width:1024px;'>
+    <h1>News More Fun</h1>
+    <p>An attempt to enact an <a href='http://www.xkcd.com/1288'>XKCD strip</a> in Ruby on Rails.</p>
+    <p>By <a href='http://www.andrewfaraday.com'>Andrew Faraday</a></p>
+  </div>
 
-<div style='width:100%;'>
-  <h1>News More Fun</h1>
-  <p>An attempt to enact an <a href='http://www.xkcd.com/1288'>XKCD strip</a> in Ruby on Rails.</p>
-  <p>By <a href='http://www.andrewfaraday.com'>Andrew Faraday</a></p>
-</div>
-
-<div stlye='float:left; width:75%;'>
-<%= yield %>
-</div>
-<div stlye='float:left; width:20%;'>
-  <ul>
-    <% Source.all.each do |source| %>
-      <li><%= link_to source.name, source_path(source) %></li>
-    <% end %>
-  </ul>
-</div>
+  <div style="position:relative; float:left; width:700px;">
+    <%= yield %>
+  </div>
+  <div style="position:relative; float:left; width:150px;">
+    <ul>
+      <% Source.all.each do |source| %>
+        <li><%= source.name %></li>
+      <% end %>
+    </ul>
+  </div>
 
 </body>
 </html>

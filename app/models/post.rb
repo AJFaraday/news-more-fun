@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
     Substitution.all.each do |sub|
       if self.body.include?(sub.from)
         self.sub_count += self.body.scan(/#{sub.from}/).count
-        self.body.gsub!(sub.from, sub.to)
+        self.body.gsub!(sub.from, "<span style='color:red;' title='#{sub.from}' >#{sub.to}</span>")
       end
     end
   end
