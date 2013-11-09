@@ -58,4 +58,10 @@ class Source < ActiveRecord::Base
     end
   end
 
+  def purge_posts
+    post = self.posts.sort('sub_count asc')
+    bottom_half = posts[0..(posts.length/2).to_i]
+    bottom_half.each{|x|x.destroy}
+  end
+
 end
