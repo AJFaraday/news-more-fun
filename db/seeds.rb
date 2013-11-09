@@ -11,6 +11,17 @@ Source.create(:name => "CNN", :url => "http://rss.cnn.com/rss/edition.rss", :bod
 Source.create(:name => 'FOX News', :url => "http://feeds.foxnews.com/foxnews/latest", :body_xpath => '//*[@id="content"]/div/div/div/div/div/article/div/div/p')
 
 #
+# Second round of rss sources
+#
+Source.create(:name => "BBC News Science", :url => "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml", :body_xpath => '//*[@id="main-content"]/div/div/p')
+Source.create(:name => "BBC News Politics", :url => "http://feeds.bbci.co.uk/politics/rss.xml", :body_xpath => '//*[@id="main-content"]/div/div/p')
+Source.create(:name => "BBC News Technology", :url => "http://feeds.bbci.co.uk/technology/rss.xml", :body_xpath => '//*[@id="main-content"]/div/div/p')
+Source.create(:name => "BBC News Entertainment", :url => "http://feeds.bbci.co.uk/entertainments_and_arts/rss.xml", :body_xpath => '//*[@id="main-content"]/div/div/p')
+
+
+
+
+#
 # substitutions (from http://xkcd.com/1288/)
 #
 Substitution.create(:from => 'witnesses',:to => 'these dudes I know')
