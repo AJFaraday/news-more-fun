@@ -62,7 +62,7 @@ class Source < ActiveRecord::Base
     self.posts.where('sub_count' => 0).each{|x|x.destroy}
     p = self.posts.collect{|x|x.sub_count}
     avg = p.sum / p.count
-    bottom_half = self.posts.where('sum_count <= ?', avg)
+    bottom_half = self.posts.where('sub_count <= ?', avg)
     bottom_half.each{|x|x.destroy}
   end
 
