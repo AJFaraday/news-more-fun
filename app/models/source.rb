@@ -24,7 +24,7 @@ class Source < ActiveRecord::Base
       @result = RSS::Parser.parse(response, false)
     end
     articles = []
-    @result.items[0..9].each do |item|
+    @result.items[0..40].each do |item|
       puts item.hash
       puts item.link
       url = URI.parse(item.link)
@@ -60,8 +60,9 @@ class Source < ActiveRecord::Base
 
   def purge_posts
     self.posts.where('sub_count' => 0).each{|x|x.destroy}
-    post = self.posts.order('sub_count asc')
-    bottom_half = posts[0..(posts.length/2).to_i]
+    p = self.posts.collect{|x|x.sub_count}
+    avg = p.sum / p.count
+    bottom_half = self.posts.where('sum_count <= ?', avg)
     bottom_half.each{|x|x.destroy}
   end
 
